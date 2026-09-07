@@ -123,7 +123,8 @@ teaching='<div class="wrap teaching-content">'
 for level in ['Graduate','Undergraduate']:
     teaching+=f'<section class="teaching-section"><div><p class="eyebrow accent">TEACHING EXPERIENCE</p><h2>{level} level</h2></div><div>'
     for c in [c for c in courses if c[0]==level]:
-        teaching+=f'<article class="course"><div class="course-meta"><span>{c[4]}</span><span>Taught in {c[5]}</span></div><h3>{c[1]}</h3><p>{c[2]}<br><span class="muted">{c[3]}</span></p></article>'
+        role = 'Course Instructor' if c[1] == 'Introduction to microeconomics' else 'Teaching Assistant'
+        teaching+=f'<article class="course"><div class="course-meta"><span>{c[4]}</span><span>Taught in {c[5]}</span></div><h3>{c[1]}</h3><p class="course-role">{role}</p><p>{c[2]}<br><span class="muted">{c[3]}</span></p></article>'
     teaching+='</div></section>'
 teaching+='</div>'
 document('teaching','Teaching',teaching)

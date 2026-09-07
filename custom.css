@@ -144,10 +144,11 @@ html{scroll-padding-top:calc(var(--header-height) + 24px)}
 
 /* Full-width headers; Teaching uses the chalkboard colour in the side margins. */
 .hero{width:100%}
-.hero-teaching{isolation:isolate;background:#595a57}
+.hero-teaching{isolation:isolate;background:#3b3d3d}
 .hero-teaching::before{content:none}
 .hero-image-cv{object-fit:cover;object-position:center 52%}
 .hero-image-teaching{object-fit:contain;object-position:center}
+.course .course-role{margin:4px 0 10px;font-size:.95rem;font-weight:600;color:var(--muted)}
 /* Show a slightly lower part of the photo by moving the image upwards. */
 .hero-image-research{object-position:55% 47%;transform:translateX(-1%) scale(1.04)}
 
