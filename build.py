@@ -1,5 +1,5 @@
 """Build the dependency-free academic website for GitHub Pages."""
-import json, re, shutil
+import json, re, shutil, hashlib
 from pathlib import Path
 from html import escape
 
@@ -63,6 +63,10 @@ def document(page,title,body,subtitle='',home=False):
     html=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{'Juan Francisco Blázquiz Pulido | Economics' if home else plain_title+' | Juan Francisco Blázquiz Pulido'}</title><meta name="description" content="{escape(desc,quote=True)}"><meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101b29"><meta property="og:title" content="{escape(plain_title,quote=True)}"><meta property="og:description" content="{escape(desc,quote=True)}"><meta property="og:type" content="website"><script src="theme.js"></script><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="custom.css"><script src="header.js" defer></script><link rel="icon" href="{escape(assets['portrait'],quote=True)}" type="image/jpeg"></head>
 <body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html"><img class="brand-photo" src="{escape(assets['portrait'],quote=True)}" alt="" width="52" height="52"><span>Juanfran <span class="surname">Blázquiz Pulido</span></span></a><nav aria-label="Main navigation">{nav}<button id="theme-toggle" class="theme-toggle" type="button" hidden aria-label="Colour theme: Auto">◐</button></nav></div></header><main id="main">{hero}{body}</main><footer><div class="wrap"><div class="footer-top"><div><a class="footer-name" href="index.html">Juan Francisco Blázquiz Pulido</a><p>IMT School for Advanced Studies Lucca<br>University of Alicante</p></div><div><p class="footer-label">Find me online</p>{profiles()}</div></div><div class="footer-bottom"><span>Content last updated: 3 September 2026</span><a href="mailto:jf.blazquizpulido@imtlucca.it">Get in touch <span aria-hidden="true">↗</span></a></div></div></footer>{analytics_script}</body></html>'''
+    # Changed CSS gets a new URL so browsers do not reuse an older cached layout.
+    for stylesheet in ('styles.css', 'custom.css'):
+        version = hashlib.sha256((OUT/stylesheet).read_bytes()).hexdigest()[:12]
+        html = html.replace(f'href="{stylesheet}"', f'href="{stylesheet}?v={version}"')
     (OUT/(page+'.html')).write_text(html,encoding='utf-8')
 
 def news_section():

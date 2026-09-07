@@ -158,6 +158,14 @@ html{scroll-padding-top:calc(var(--header-height) + 24px)}
   mask-image:none;
   -webkit-mask-image:none;
 }
+@media screen and (max-width:900px){
+  .hero-image-teaching{
+    object-fit:cover;
+    object-position:30% 60%;
+    transform:scale(1.18);
+    transform-origin:30% 60%;
+  }
+}
 
 /* Contact: email then address on the left, uncropped UA photo on the right. */
 .contact-grid{align-items:center}
