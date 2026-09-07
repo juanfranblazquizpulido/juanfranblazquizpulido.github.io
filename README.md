@@ -1,10 +1,12 @@
 # Juan Francisco Blázquiz Pulido — academic website
 
-Read [EDITING_GUIDE.md](EDITING_GUIDE.md) for detailed page-by-page editing instructions, file mappings and examples.
+Repositorio privado de la web académica, con historial de versiones. La web todavía no está publicada en Internet.
 
-## Build and preview
+Consulta [GUIA_GITHUB.md](GUIA_GITHUB.md) para editar textos, fotos y estilos, previsualizar la web, copiar la carpeta, usar GitHub y recuperar versiones. Esta es la guía actual en castellano. [EDITING_GUIDE.md](EDITING_GUIDE.md) conserva notas de diseño anteriores; algunas quedaron sustituidas por los ajustes posteriores.
 
-Run these commands inside this site folder (Python 3.10+; no external packages):
+## Compilar y ver localmente
+
+Dentro de esta carpeta, con Python 3:
 
 ```sh
 python build.py
@@ -12,40 +14,24 @@ python verify.py
 python -m http.server 8765 --bind 127.0.0.1 --directory dist
 ```
 
-Open http://127.0.0.1:8765/. If the server is already running, rebuild and refresh.
+Abre http://127.0.0.1:8765/index.html. `dist` es generado y no se guarda en Git. No lo edites directamente.
 
-## Contents
+## Contenido y fotos
 
-All five pages retain the academic content migrated from Google Sites, including both abstracts, four projects in progress, all 23 conferences, seminars, five courses, the local CV and both institutional addresses and emails. Social profiles now include X, Bluesky, LinkedIn, Google Scholar, GitHub, ORCID and ResearchGate.
+Cinco páginas: Home, Research, Teaching, CV y Contact. Se conservan los textos académicos, conferencias, seminarios, docencia, CV, los dos emails y la dirección española. Las siete redes sociales están en `content/socials.json`.
 
-## Local photos
+- Home: Explanada y retrato BlazquizJ.
+- Research: defensa, versión sin fecha; se conserva el original.
+- Teaching: pizarra con laterales del mismo color.
+- CV: campus de IMT.
+- Contact: castillo de Alicante en cabecera y foto de la UA a la derecha.
 
-- Home: Explanada (explanada-castillo.jpg).
-- Research: thesis defence (research-defense.jpg).
-- Teaching: blackboard (pizarra.png), fitted without cropping.
-- CV: UA (ua-mano.jpg).
-- Contact: Alicante castle and rainbow (alicante-castillo.jpg).
-- Portrait and header: BlazquizJ.jpg.
+Las asignaciones están en `content/images.json`. Las fotos usadas y las reservadas se guardan en `public/assets/`.
 
-All photos and icons are local. Unused photos are retained in public/assets/ and copied into dist/assets/ on every build. Original files are unmodified; CSS controls cropping.
+## GitHub y publicación
 
-## Editing
+El repositorio `juanfranblazquizpulido/juanfranblazquizpulido.github.io` es privado. El historial comienza con el estado actual; no reconstruye las ediciones anteriores.
 
-- build.py: layout, headings, paper metadata, teaching entries, contact information and footer.
-- content/inicio.json and content/research.json: migrated paragraphs used in the pages.
-- content/images.json: photo assignments.
-- content/socials.json: profile order, names, links and icons.
-- custom.css: readable personal style overrides, including image focal positions.
-- styles.css: base styles.
-- public/assets/: photos, icons and PDF.
-- dist/: generated output; do not edit directly.
+El flujo de Pages omite el despliegue mientras el repositorio sea privado. Publicar en GitHub Pages con el plan gratuito requerirá decidir hacer público el repositorio, revisar los archivos y configurar Settings > Pages > GitHub Actions. La dirección prevista es https://juanfranblazquizpulido.github.io/ .
 
-Search build.py for HOME_HERO_TAGLINE to restore or replace the commented optional text above the name.
-
-## Publication status
-
-The website is not published yet. The organisation juanfranblazquizpulido has been created, administered through juanfranbp4. Repository creation and GitHub Pages publication remain pending.
-
-For juanfranblazquizpulido.github.io, the organisation must own a public repository named juanfranblazquizpulido.github.io. Upload this site folder's contents to its root, including .github/workflows/pages.yml. Set Settings > Pages > Source to GitHub Actions. The workflow builds and deploys dist/ when main changes.
-
-The source and stored assets will be public under this free setup. No credentials or tracking code are included. Migration audit files and one-off editing scripts remain outside this publishable folder.
+Cloudflare Web Analytics está preparado pero desactivado: falta el token del sitio. Consulta [NEWS_AND_ANALYTICS.md](NEWS_AND_ANALYTICS.md). No se muestra ningún contador público.
