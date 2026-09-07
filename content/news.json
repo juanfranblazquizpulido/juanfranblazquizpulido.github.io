@@ -1,25 +1,26 @@
 [
   {
-    "label": "Upcoming",
-    "prefix": "JMP accepted at ",
-    "title": "SAEe 2026",
+    "label": "Upcoming event (Dec 26)",
+    "prefix": "Accepted speaker at ",
+    "title": "SAEe 2026 at ULPGC",
     "url": "https://asesec.org/simposio-de-la-asociacion-espanola-de-economia/"
   },
   {
-    "label": "Sep 2026",
-    "prefix": "",
-    "title": "Assistant Professor at UV",
-    "url": "https://www.uv.es/uvweb/college/en/university-valencia-1285845048380.html"
+    "label": "New position (Sept 26)",
+    "prefix": "Joined the ",
+    "title": "University of Valencia (UV)",
+    "suffix": " as an Assistant Professor in the Department of Economic Analysis (DAE).",
+    "url": "https://www.uv.es/uvweb/economic-analysis-department/en/department/presentation-1285854460764.html"
   },
   {
-    "label": "Recent",
+    "label": "Recent event (Sept 26)",
     "prefix": "Speaker at ",
-    "title": "European ESA 2026",
+    "title": "European ESA 2026 at UPF",
     "url": "https://eventum.upf.edu/144407/detail/2026-european-meeting-of-the-economic-science-association-esa-in-barcelona.html"
   },
   {
-    "label": "Jun 2026",
+    "label": "Ph.D. awarded (Jun 26)",
     "prefix": "",
-    "title": "Ph.D. completed"
+    "title": "Completed my Ph.D. in Economics at IMT Lucca and the University of Alicante"
   }
 ]

@@ -237,16 +237,16 @@ footer .profiles a{white-space:nowrap;font-size:.82rem}
 
 /* Contact: a single social row and side-by-side email addresses. */
 .home-news{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);overflow-x:auto}
-.biography .home-news h2{font-size:1.05rem;white-space:normal;margin-bottom:8px}
+.biography .home-news h2{font-size:1.65rem;font-weight:700;white-space:normal;margin-bottom:14px}
 .news-empty{font-size:.95rem;color:var(--muted)}
 .news-list{list-style:none;padding:0;margin:0}
-.news-list li{display:grid;grid-template-columns:90px max-content;gap:14px;padding:7px 0;border-bottom:1px solid var(--line);white-space:nowrap}
+.news-list li{display:grid;grid-template-columns:180px minmax(0,1fr);gap:14px;padding:9px 0;border-bottom:1px solid var(--line)}
 .news-label{font-size:.85rem;font-weight:600}
 .news-list .news-title{font-size:.9rem;margin:0}
 .news-date{font-size:.8rem;color:var(--muted);padding-top:4px}
 .news-list h3{font-size:1rem;margin:0 0 5px}
 .news-list p{font-size:.95rem;margin:0}
-@media(max-width:480px){.news-list li{grid-template-columns:66px max-content;gap:8px}.news-label,.news-list .news-title{font-size:.78rem}}
+@media(max-width:480px){.news-list li{grid-template-columns:105px minmax(0,1fr);gap:10px}.news-label,.news-list .news-title{font-size:.82rem}}
 .contact-socials .social-icons{grid-template-columns:repeat(7,minmax(90px,1fr));max-width:none;overflow-x:auto}
 .contact-socials .social-icons a,.contact-socials .social-icons a:nth-child(-n+3){grid-column:auto}
 .contact-emails{flex-direction:row;gap:12px 24px;flex-wrap:wrap}

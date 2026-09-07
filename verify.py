@@ -55,7 +55,7 @@ for social in socials:
     assert social['url'] in pages['index.html'].links
     assert social['icon'] in pages['index.html'].images
 assert '>Home</a>' in home
-assert home.index('Welcome to my academic webpage.') < home.index('ABOUT ME')
+assert home.index('Welcome to my academic website!') < home.index('ABOUT ME')
 assert home.index('You can call me <strong>Juanfran</strong>') < home.index('ABOUT ME')
 assert '<span class="surname">Blázquiz Pulido</span>' in home
 assert 'Spring 2022' in (out/'teaching.html').read_text(encoding='utf-8')
