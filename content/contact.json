@@ -1,43 +1,18 @@
 [
   {
-    "tag": "h1",
+    "tag": "p",
     "text": "Contact",
     "html": "Contact"
   },
   {
     "tag": "p",
-    "text": "Addresses: ",
-    "html": "Addresses: "
+    "text": "Departament d’Anàlisi Econòmica, Universitat de València",
+    "html": "Departament d’Anàlisi Econòmica, Universitat de València"
   },
   {
     "tag": "p",
-    "text": "Department of Economics, Universidad de Alicante, ",
-    "html": "Department of Economics, Universidad de Alicante, "
-  },
-  {
-    "tag": "p",
-    "text": "03690 San Vicente del Raspeig (Alicante), Spain",
-    "html": "03690 San Vicente del Raspeig (Alicante), Spain"
-  },
-  {
-    "tag": "p",
-    "text": " ",
-    "html": " "
-  },
-  {
-    "tag": "p",
-    "text": "IMT School for Advanced Studies Lucca,",
-    "html": "IMT School for Advanced Studies Lucca,"
-  },
-  {
-    "tag": "p",
-    "text": "Piazza S. Francesco 19, Lucca, 55100, Italy",
-    "html": "Piazza S. Francesco 19, Lucca, 55100, Italy"
-  },
-  {
-    "tag": "p",
-    "text": "Emails: ",
-    "html": "Emails: "
+    "text": "Av. dels Tarongers, s/n, 46022 Valencia, Spain",
+    "html": "Av. dels Tarongers, s/n, 46022 Valencia, Spain"
   },
   {
     "tag": "p",
@@ -46,12 +21,7 @@
   },
   {
     "tag": "p",
-    "text": "juanfrancisco.blazquiz@ua.es",
-    "html": "juanfrancisco.blazquiz@ua.es"
-  },
-  {
-    "tag": "p",
-    "text": " ",
-    "html": " "
+    "text": "juan.blazquiz@uv.es",
+    "html": "juan.blazquiz@uv.es"
   }
 ]

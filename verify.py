@@ -26,15 +26,21 @@ for name,page in pages.items():
         assert not urlsplit(src).scheme,('Expected local image',name,src)
         assert (out/src).is_file(),(name,src)
 research=(out/'research.html').read_text(encoding='utf-8')
-for n in range(1,24):assert f'conference-{n}' in pages['research.html'].ids,n
+for n in range(1,25):assert f'conference-{n}' in pages['research.html'].ids,n
 assert research.count('<details>')==2
 for idx in [7,11]:
     b=json.loads((root/'content/research.json').read_text(encoding='utf-8'))[idx]
     assert b['html'].removeprefix('Abstract: ').strip() in research
 home=(out/'index.html').read_text(encoding='utf-8')
+assert home.count('(tenure-track)') == 1
+assert '<h2 id="news-title">News</h2>' in home
+assert home.index('Explore my research') < home.index('id="news-title"')
+assert 'conference-24' in pages['research.html'].ids
+assert 'href="#conference-24">24</a>' in research
+assert '16–18 December 2026' in research
 for dest in ['x.com/juanfranbp4','linkedin.com/in/juan-francisco-blazquiz-pulido','scholar.google.es/citations?user=8MHfUIMAAAAJ','github.com/juanfranbp4','orcid.org/0000-0001-9426-1583','researchgate.net/profile/Juan-Francisco-Blazquiz-Pulido']:assert dest in home,dest
 contact=(out/'contact.html').read_text(encoding='utf-8')
-for email in ['jf.blazquizpulido@imtlucca.it','juanfrancisco.blazquiz@ua.es']:assert 'mailto:'+email in contact
+for email in ['jf.blazquizpulido@imtlucca.it','juan.blazquiz@uv.es']:assert 'mailto:'+email in contact
 assert (out/'assets/CV_Juanfran_Blazquiz.pdf').read_bytes().startswith(b'%PDF')
 images=json.loads((root/'content/images.json').read_text(encoding='utf-8'))
 for key in ['inicio','research','teaching','cv','contact']:
@@ -65,5 +71,5 @@ assert images['contact_photo'] in pages['contact.html'].images
 assert 'Graduate and undergraduate courses' not in (out/'teaching.html').read_text(encoding='utf-8')
 for social in socials:assert social['icon'] in pages['contact.html'].images
 for url in json.loads((root/'content/coauthors.json').read_text(encoding='utf-8')).values():assert url in pages['research.html'].links
-print('PASS: internal links, local images, five pages, 23 conferences, both abstracts, seven profiles and icons, both emails, local CV, updated Home layout and commented tagline.')
+print('PASS: internal links, local images, five pages, 24 conferences, both abstracts, seven profiles and icons, both emails, local CV, updated Home layout and commented tagline.')
 print('No browser visual test was performed.')
