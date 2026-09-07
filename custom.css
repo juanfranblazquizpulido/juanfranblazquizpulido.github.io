@@ -25,7 +25,7 @@
 /* TEACHING: contain shows the entire source image, with no cover crop.
    The background colour fills any spare space on narrow screens. */
 .hero-teaching{aspect-ratio:1156/424;min-height:280px;background:#5c5d5a}
-.hero-image-teaching{object-fit:cover;object-position:75% center}
+.hero-image-teaching{object-fit:cover;object-position:75% 42%}
 .hero-teaching .hero-content{padding-block:28px}
 
 @media(max-width:1000px){
@@ -162,7 +162,7 @@ html{scroll-padding-top:calc(var(--header-height) + 24px)}
   .hero-image-teaching{
     object-fit:cover;
     object-position:78% 60%;
-    transform:scale(1.18);
+    transform:translateY(12px) scale(1.18);
     transform-origin:78% 60%;
   }
 }
