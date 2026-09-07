@@ -160,10 +160,14 @@ html{scroll-padding-top:calc(var(--header-height) + 24px)}
 }
 @media screen and (max-width:900px){
   .hero-image-teaching{
-    object-fit:cover;
-    object-position:70% 60%;
-    transform:translateY(14px) scale(1.08);
-    transform-origin:70% 60%;
+    /* Size by width, not header height, so the panorama can genuinely zoom out.
+       The matching board backdrop fills the remaining vertical space. */
+    width:max(150%,620px);height:auto;
+    left:70%;right:auto;top:50%;bottom:auto;
+    object-fit:contain;
+    transform:translate(-75%,-40%);
+    mask-image:linear-gradient(to bottom,transparent,#000 10%,#000 90%,transparent);
+    -webkit-mask-image:linear-gradient(to bottom,transparent,#000 10%,#000 90%,transparent);
   }
 }
 
