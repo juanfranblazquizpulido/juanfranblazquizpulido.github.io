@@ -1,7 +1,7 @@
 from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
-import json,re
+import json,re,hashlib
 root=Path(__file__).parent
 out=root/'dist'
 class Page(HTMLParser):
@@ -42,6 +42,15 @@ for dest in ['x.com/juanfranbp4','linkedin.com/in/juan-francisco-blazquiz-pulido
 contact=(out/'contact.html').read_text(encoding='utf-8')
 for email in ['jf.blazquizpulido@imtlucca.it','juan.blazquiz@uv.es']:assert 'mailto:'+email in contact
 assert (out/'assets/CV_Juanfran_Blazquiz.pdf').read_bytes().startswith(b'%PDF')
+cv_bytes=(out/'assets/CV_Juanfran_Blazquiz.pdf').read_bytes()
+assert cv_bytes==(root/'public/assets/CV_Juanfran_Blazquiz.pdf').read_bytes()
+cv_url='assets/CV_Juanfran_Blazquiz.pdf?v='+hashlib.sha256(cv_bytes).hexdigest()[:12]
+cv_page=(out/'cv.html').read_text(encoding='utf-8')
+assert f'data="{cv_url}"' in cv_page, 'CV viewer must use the current PDF version'
+for name in ['index.html','cv.html']:
+    cv_links=[link for link in pages[name].links if urlsplit(link).path=='assets/CV_Juanfran_Blazquiz.pdf']
+    if name=='cv.html': assert cv_links, 'Missing CV download links'
+    assert all(link==cv_url for link in cv_links), ('Stale CV link',name)
 images=json.loads((root/'content/images.json').read_text(encoding='utf-8'))
 for key in ['inicio','research','teaching','cv','contact']:
     assert images[key] in pages[('index' if key=='inicio' else key)+'.html'].images

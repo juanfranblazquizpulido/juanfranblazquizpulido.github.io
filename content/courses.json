@@ -1,0 +1,72 @@
+[
+  {
+    "level": "Graduate",
+    "title": "Evolutionary Game Theory",
+    "degree": "Ph.D. in Economics",
+    "institution": "IMT School for Advanced Studies Lucca",
+    "term": "Spring 2022",
+    "language": "English",
+    "role": "Teaching Assistant",
+    "url": "https://www.imtlucca.it/sites/default/files/20211027-all-courses-list.pdf#page=92"
+  },
+  {
+    "level": "Undergraduate",
+    "title": "Econometrics",
+    "degree": "Degree in Business Management and Administration (ADE)",
+    "institution": "University of Valencia (UV)",
+    "term": "Fall 2026",
+    "language": "",
+    "role": "Course Instructor",
+    "url": "https://www.uv.es/uvweb/college/en/undergraduate-studies/undergraduate-studies-/degree-programmes-offered-1285846094474.html?idA=35820&idT=1313;2027"
+  },
+  {
+    "level": "Undergraduate",
+    "title": "Behavioural Economics",
+    "degree": "Degree in Business Intelligence and Analytics (BIA)",
+    "institution": "University of Valencia (UV)",
+    "term": "Fall 2026",
+    "language": "",
+    "role": "Practical Class Instructor",
+    "url": "https://www.uv.es/uvweb/college/en/undergraduate-studies/undergraduate-studies-/degree-programmes-offered-1285846094474.html?idA=36527&idT=1332;2027"
+  },
+  {
+    "level": "Undergraduate",
+    "title": "Introduction to Microeconomics",
+    "degree": "Double Degree in Tourism and Business Administration and Management (TADE)",
+    "institution": "University of Alicante",
+    "term": "Fall 2025",
+    "language": "Spanish",
+    "role": "Course Instructor",
+    "url": "https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?scaca=2025-26&wcodasi=22001&wlengua=en"
+  },
+  {
+    "level": "Undergraduate",
+    "title": "Statistics and Introduction to Econometrics",
+    "degree": "Degree in Business Administration and Management (ADE)",
+    "institution": "University of Alicante",
+    "term": "Fall 2025",
+    "language": "Spanish",
+    "role": "Teaching Assistant",
+    "url": "https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?scaca=2025-26&wcodasi=22010&wlengua=en"
+  },
+  {
+    "level": "Undergraduate",
+    "title": "Quantitative Methods Applied to International Relations",
+    "degree": "Double Degree in Law and International Relations",
+    "institution": "University of Alicante",
+    "term": "Spring 2024",
+    "language": "Spanish",
+    "role": "Teaching Assistant",
+    "url": "https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?scaca=2023-24&wcodasi=28219&wlengua=en"
+  },
+  {
+    "level": "Undergraduate",
+    "title": "Introduction to Statistics",
+    "degree": "Double Degree in Tourism and Business Administration and Management (TADE)",
+    "institution": "University of Alicante",
+    "term": "Spring 2019",
+    "language": "Spanish",
+    "role": "Teaching Assistant",
+    "url": "https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?scaca=2018-19&wcodasi=22009&wlengua=en"
+  }
+]

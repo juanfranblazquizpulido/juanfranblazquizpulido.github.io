@@ -67,6 +67,10 @@ def document(page,title,body,subtitle='',home=False):
     for stylesheet in ('styles.css', 'custom.css'):
         version = hashlib.sha256((OUT/stylesheet).read_bytes()).hexdigest()[:12]
         html = html.replace(f'href="{stylesheet}"', f'href="{stylesheet}?v={version}"')
+    # Version the embedded PDF and every download link together when its bytes change.
+    cv_path = 'assets/CV_Juanfran_Blazquiz.pdf'
+    cv_version = hashlib.sha256((OUT/cv_path).read_bytes()).hexdigest()[:12]
+    html = html.replace(f'"{cv_path}"', f'"{cv_path}?v={cv_version}"')
     (OUT/(page+'.html')).write_text(html,encoding='utf-8')
 
 def news_section():
@@ -124,13 +128,14 @@ if opened:research+='</ol></div>'
 research+='</section><section id="seminars" class="content-section"><h2>Seminars</h2>'+para(b[seminars_start+1]['html'])+'</section></div></div>'
 document('research','Research',research)
 
-courses=[('Graduate','Evolutionary Game Theory','Ph.D. in Economics','IMT School for Advanced Studies Lucca','Spring 2022','English'),('Undergraduate','Introduction to microeconomics','BSc in Tourism and Business Administration','University of Alicante','Fall 2025','Spanish'),('Undergraduate','Statistics and introduction to econometrics','BSc in Business Administration','University of Alicante','Fall 2025','Spanish'),('Undergraduate','Quantitative methods for international relations','BSc in Law and International Relations','University of Alicante','Spring 2024','Spanish'),('Undergraduate','Introduction to statistics','BSc in Tourism and Business Administration','University of Alicante','Spring 2019','Spanish')]
+courses=json.loads((DATA/'courses.json').read_text(encoding='utf-8'))
 teaching='<div class="wrap teaching-content">'
-for level in ['Graduate','Undergraduate']:
+for level in ['Undergraduate','Graduate']:
     teaching+=f'<section class="teaching-section"><div><p class="eyebrow accent">TEACHING EXPERIENCE</p><h2>{level} level</h2></div><div>'
-    for c in [c for c in courses if c[0]==level]:
-        role = 'Course Instructor' if c[1] == 'Introduction to microeconomics' else 'Teaching Assistant'
-        teaching+=f'<article class="course"><div class="course-meta"><span>{c[4]}</span><span>Taught in {c[5]}</span></div><h3>{c[1]}</h3><p class="course-role">{role}</p><p>{c[2]}<br><span class="muted">{c[3]}</span></p></article>'
+    for c in [c for c in courses if c['level']==level]:
+        language=f'<span>Taught in {escape(c["language"])}</span>' if c.get('language') else ''
+        role=f'<p class="course-role">{escape(c["role"])}</p>' if c.get('role') else ''
+        teaching+=f'<article class="course"><div class="course-meta"><span>{escape(c["term"])}</span>{language}</div><h3><a href="{escape(c["url"],quote=True)}">{escape(c["title"])}</a></h3>{role}<p>{escape(c["degree"])}<br><span class="muted">{escape(c["institution"])}</span></p></article>'
     teaching+='</div></section>'
 teaching+='</div>'
 document('teaching','Teaching',teaching)
