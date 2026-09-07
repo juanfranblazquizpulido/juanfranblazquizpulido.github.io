@@ -5,3 +5,6 @@ dist/
 .env
 .env.*
 *.log
+.idea/
+.venv/
+venv/
