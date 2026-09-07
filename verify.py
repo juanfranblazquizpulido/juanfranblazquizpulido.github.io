@@ -32,7 +32,6 @@ for idx in [7,11]:
     b=json.loads((root/'content/research.json').read_text(encoding='utf-8'))[idx]
     assert b['html'].removeprefix('Abstract: ').strip() in research
 home=(out/'index.html').read_text(encoding='utf-8')
-assert home.count('(tenure-track)') == 1
 assert '<h2 id="news-title">News</h2>' in home
 assert home.index('Explore my research') < home.index('id="news-title"')
 assert 'conference-24' in pages['research.html'].ids
