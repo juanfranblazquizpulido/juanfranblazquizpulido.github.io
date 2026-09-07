@@ -1,0 +1,4 @@
+Edited image: research-defense-no-date.png
+Original preserved: research-defense.jpg
+Tool: built-in image_gen (precise-object-edit)
+Prompt: Remove ONLY the small date text 'Date: 22/06/2026' at the bottom right of the projected slide (approximately x845-920,y633-650 in the 961x1280 source), filling it with the matching pale blue projection background. Preserve the original photo composition, dimensions/aspect ratio, subject's exact face, body, clothing, every other text, screen, podium, lighting and all other pixels as closely as possible. Do not crop, reframe, beautify, or change any other content. Output the complete photo with only that date removed.

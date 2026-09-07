@@ -1,0 +1,12 @@
+[
+  {
+    "tag": "h1",
+    "text": "Curriculum Vitae",
+    "html": "Curriculum Vitae"
+  },
+  {
+    "tag": "p",
+    "text": "You can download my CV in PDF format here.",
+    "html": "You can download my CV in PDF format<a href=\"https://drive.google.com/file/d/1q1Nd8Ov4uQhNSP_KOZZPBrCS95ZhNcOH/view?usp=sharing\"> here</a>."
+  }
+]

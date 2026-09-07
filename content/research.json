@@ -1,0 +1,262 @@
+[
+  {
+    "tag": "h1",
+    "text": "Research",
+    "html": "Research"
+  },
+  {
+    "tag": "h2",
+    "text": "Research fields",
+    "html": "<a href=\"#h.5n5a09fppbze\"></a>Research fields"
+  },
+  {
+    "tag": "p",
+    "text": "Behavioral and Experimental Economics: Unethical behavior, Punishment, Social norms, Strategic sophistication.",
+    "html": "Behavioral and Experimental Economics: Unethical behavior, Punishment, Social norms, Strategic sophistication."
+  },
+  {
+    "tag": "p",
+    "text": "Game Theory: Evolution, Learning.",
+    "html": "Game Theory: Evolution, Learning."
+  },
+  {
+    "tag": "p",
+    "text": "\tPublications",
+    "html": "\tPublications"
+  },
+  {
+    "tag": "p",
+    "text": "Who's the deceiver? Identifying deceptive intentions in communication. (with L. Polonio and E. Bilancini) Games and Economic Behavior (2024). ",
+    "html": "<a href=\"https://doi.org/10.1016/j.geb.2024.02.006\">Who&#x27;s the deceiver? Identifying deceptive intentions in communication.</a> (with L. Polonio and E. Bilancini) Games and Economic Behavior (2024). "
+  },
+  {
+    "tag": "p",
+    "text": "Presented at the below conferences: 1, 2, 3, 5, 7, 8, 9, 10, 12 and 13. Previously known as \"Analyzing deception, honesty, and trustworthiness in sender-receiver games\". ",
+    "html": "Presented at the below conferences: 1, 2, 3, 5, 7, 8, 9, 10, 12 and 13. Previously known as &quot;Analyzing deception, honesty, and trustworthiness in sender-receiver games&quot;. "
+  },
+  {
+    "tag": "p",
+    "text": "Abstract: Recognizing people's deceptive intentions when communicating is crucial to detect statements that may drive us to unintended harmful decisions. This paper studies individuals' intentions in games where players can tell the truth with deceiving purposes. In a preregistered experiment, we combine a sender-receiver game with possible strategic considerations and the associated belief elicitation questionnaire, with a sender-receiver game with no room for strategic considerations. We propose a new method that improves the identification of senders' intentions to deceive. Our findings reveal that relying solely on the strategic sender-receiver game and the elicited beliefs, as previously proposed in the literature, can lead to misinterpreting the actual intentions of a substantial proportion of senders. In particular, our new method helps discern actual deceivers from pessimistic truth-tellers and identifies senders who try to excuse their previous deceiving message. All in all, our method identifies more senders with deceptive intentions compared to previous methods.",
+    "html": "Abstract: Recognizing people&#x27;s deceptive intentions when communicating is crucial to detect statements that may drive us to unintended harmful decisions. This paper studies individuals&#x27; intentions in games where players can tell the truth with deceiving purposes. In a preregistered experiment, we combine a sender-receiver game with possible strategic considerations and the associated belief elicitation questionnaire, with a sender-receiver game with no room for strategic considerations. We propose a new method that improves the identification of senders&#x27; intentions to deceive. Our findings reveal that relying solely on the strategic sender-receiver game and the elicited beliefs, as previously proposed in the literature, can lead to misinterpreting the actual intentions of a substantial proportion of senders. In particular, our new method helps discern actual deceivers from pessimistic truth-tellers and identifies senders who try to excuse their previous deceiving message. All in all, our method identifies more senders with deceptive intentions compared to previous methods."
+  },
+  {
+    "tag": "p",
+    "text": "\tWorking papers",
+    "html": "\tWorking papers"
+  },
+  {
+    "tag": "p",
+    "text": "Evolution of Conventions in Uncertain Environments. (with E. Bilancini and L. Boncinelli) ",
+    "html": "<a href=\"https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4360114\">Evolution of Conventions in Uncertain Environments</a>. (with E. Bilancini and L. Boncinelli) "
+  },
+  {
+    "tag": "p",
+    "text": "Presented at the below conferences: 4, 6, 19, 20 and 21. ",
+    "html": "Presented at the below conferences: 4, 6, 19, 20 and 21. "
+  },
+  {
+    "tag": "p",
+    "text": "Abstract: We study the role of uncertainty in the evolution of conventions in coordination games when agents are myopic best responders. We introduce uncertainty of the choice environment by means of an ergodic Markov process ruling the switching across a collection of 2-player symmetric coordination games with the same strategy sets but different payoffs, referred to as scenarios. We apply stochastic stability analysis to study the selection of equilibria in the long run when there are multiple scenarios with diverse characteristics. We show that the stochastically stable states may be entirely determined by one or more scenarios that are played very rarely, so changing dramatically any prediction based exclusively on the most likely scenarios. Moreover, we show that the error model determines which scenarios play such crucial role, indicating that any abstraction from low probability scenarios should be evaluated in the light of the considered error model. Finally, we show how to compute the radius and the coradius of a convention in this setup.",
+    "html": "Abstract: We study the role of uncertainty in the evolution of conventions in coordination games when agents are myopic best responders. We introduce uncertainty of the choice environment by means of an ergodic Markov process ruling the switching across a collection of 2-player symmetric coordination games with the same strategy sets but different payoffs, referred to as scenarios. We apply stochastic stability analysis to study the selection of equilibria in the long run when there are multiple scenarios with diverse characteristics. We show that the stochastically stable states may be entirely determined by one or more scenarios that are played very rarely, so changing dramatically any prediction based exclusively on the most likely scenarios. Moreover, we show that the error model determines which scenarios play such crucial role, indicating that any abstraction from low probability scenarios should be evaluated in the light of the considered error model. Finally, we show how to compute the radius and the coradius of a convention in this setup."
+  },
+  {
+    "tag": "p",
+    "text": "\tWork in progress",
+    "html": "\tWork in progress"
+  },
+  {
+    "tag": "p",
+    "text": "Shooting the Messenger? The Role of Consequences and (Dis)Honesty in Punishment (Single-authored Job-Market Paper) [Draft soon]",
+    "html": "Shooting the Messenger? The Role of Consequences and (Dis)Honesty in Punishment (Single-authored Job-Market Paper) [Draft soon]"
+  },
+  {
+    "tag": "p",
+    "text": "Presented at the below conferences: 9, 11, 14, 15, 16, 17, 22 and 23. Previously known as \"Is always lying condemnable? The effect of consequences on punishing dishonesty\". ",
+    "html": "Presented at the below conferences: 9, 11, 14, 15, 16, 17, 22 and 23. Previously known as &quot;Is always lying condemnable? The effect of consequences on punishing dishonesty&quot;. "
+  },
+  {
+    "tag": "p",
+    "text": "Unlocking strategic sophistication: How do we learn from different individuals and transfer it to new environments? (joint with S. Di Guida and L. Polonio). [Collecting data]",
+    "html": "Unlocking strategic sophistication: How do we learn from different individuals and transfer it to new environments? (joint with S. Di Guida and L. Polonio). [Collecting data]"
+  },
+  {
+    "tag": "p",
+    "text": "Presented at the below conferences: 18. ",
+    "html": "Presented at the below conferences: 18. "
+  },
+  {
+    "tag": "p",
+    "text": "Identity, Norms, and Anti-Social Behavior (joint with D. Aycinena and I. Rodríguez-Lara) [Collecting data]",
+    "html": "Identity, Norms, and Anti-Social Behavior (joint with D. Aycinena and I. Rodríguez-Lara) [Collecting data]"
+  },
+  {
+    "tag": "p",
+    "text": "The Role of Instructions on Strategic Sophistication (joint with T. Celadin, F. Panizza, E. Bilancini and L. Polonio) [Drafting phase]",
+    "html": "The Role of Instructions on Strategic Sophistication (joint with T. Celadin, F. Panizza, E. Bilancini and L. Polonio) [Drafting phase]"
+  },
+  {
+    "tag": "p",
+    "text": "Conferences",
+    "html": "Conferences"
+  },
+  {
+    "tag": "p",
+    "text": "2026",
+    "html": "2026"
+  },
+  {
+    "tag": "p",
+    "text": "23) 2026 European ESA Meeting. University Pompeu Fabra, Barcelona (Spain), September 2026. ",
+    "html": "23) 2026 <a href=\"https://eventum.upf.edu/144407/detail/2026-european-meeting-of-the-economic-science-association-esa-in-barcelona.html\">European</a> ESA Meeting. University Pompeu Fabra, Barcelona (Spain), September 2026. "
+  },
+  {
+    "tag": "p",
+    "text": "22) TIBER Symposium 2026. Tilburg University, Tilburg (Netherlands), August 2026.",
+    "html": "22) <a href=\"https://www.tilburguniversity.edu/research/institutes-and-research-groups/tiber/symposium\">TIBER</a> Symposium 2026. Tilburg University, Tilburg (Netherlands), August 2026."
+  },
+  {
+    "tag": "p",
+    "text": "21) Foundations of Utility and Risk Conference (FUR 2026). Universidad de Alicante, Alicante (Spain), June 2026.",
+    "html": "21) Foundations of Utility and Risk Conference (<a href=\"https://fur2026.ua.es/\">FUR 2026</a>). Universidad de Alicante, Alicante (Spain), June 2026."
+  },
+  {
+    "tag": "p",
+    "text": "20) 2026 Biannual conference of the Spanish Royal Mathematical Society (Bienal RSME 2026). Universidad de Alicante, Alicante (Spain), January 2026.",
+    "html": "20) 2026 Biannual conference of the Spanish Royal Mathematical Society (Bienal RSME 2026). Universidad de Alicante, Alicante (Spain), January 2026."
+  },
+  {
+    "tag": "p",
+    "text": "2025",
+    "html": "2025"
+  },
+  {
+    "tag": "p",
+    "text": "19) 50th Symposium of the Spanish Economic Association (SAEe 2025). Universitat Autònoma de Barcelona, Barcelona (Spain), December 2025.",
+    "html": "19) 50th Symposium of the Spanish Economic Association (<a href=\"https://asesec.org/simposio-de-la-asociacion-espanola-de-economia-2025/\">SAEe 2025</a>). Universitat Autònoma de Barcelona, Barcelona (Spain), December 2025."
+  },
+  {
+    "tag": "p",
+    "text": "18) 14th Behavioral and Experimental Economics Network Meeting (BEEN Cagliari). University of Cagliari, Cagliari (Italy), September 2025.",
+    "html": "18) 14th Behavioral and Experimental Economics Network Meeting (<a href=\"https://sites.unica.it/beencagliari/\">BEEN Cagliari</a>). University of Cagliari, Cagliari (Italy), September 2025."
+  },
+  {
+    "tag": "p",
+    "text": "17) 2nd Scottish Behavioural Sciences Conference 2025. University of Glasgow, Glasgow (Scotland), May 2025.",
+    "html": "17) 2nd <a href=\"https://www.gla.ac.uk/schools/business/events/archive/2025/headline_1142171_en.html\">Scottish</a> Behavioural Sciences Conference 2025. University of Glasgow, Glasgow (Scotland), May 2025."
+  },
+  {
+    "tag": "p",
+    "text": "2024",
+    "html": "2024"
+  },
+  {
+    "tag": "p",
+    "text": "16) 2nd Milan PhD Economics Workshop. University of Milan-Bicocca, Milan (Italy), September 2024.",
+    "html": "16) 2nd Milan PhD Economics Workshop. University of Milan-Bicocca, Milan (Italy), September 2024."
+  },
+  {
+    "tag": "p",
+    "text": "15) Market, Cooperation and Votes Workshop. University Carlos III (Spain), June 2024.",
+    "html": "15) Market, Cooperation and Votes Workshop. University Carlos III (Spain), June 2024."
+  },
+  {
+    "tag": "p",
+    "text": "14) 13th Southern Europe Experimental Team’s Meeting (SEET 2024). University of Malaga (Spain), February 2024.",
+    "html": "14) 13th Southern Europe Experimental Team’s Meeting (<a href=\"https://fguma.es/en/seet-2024-program/\">SEET 2024</a>). University of Malaga (Spain), February 2024."
+  },
+  {
+    "tag": "p",
+    "text": "2023",
+    "html": "2023"
+  },
+  {
+    "tag": "p",
+    "text": "13) 48th Symposium of the Spanish Economic Association (SAEe 2023). University of Salamanca (Spain), December 2023. ",
+    "html": "13) 48th Symposium of the Spanish Economic Association (<a href=\"https://congresscreator.org/full-programme-saee23\">SAEe 2023</a>). University of Salamanca (Spain), December 2023. "
+  },
+  {
+    "tag": "p",
+    "text": "12) 64th Symposium of the Italian Economic Association (SIE 2023). Gran Sasso Science Institute, L’Aquila (Italy). October 2023.",
+    "html": "12) 64th Symposium of the Italian Economic Association (<a href=\"https://www.siecon.org/it/64a-rsa-gran-sasso-science-institute-gssi-laquila-19-21-ottobre\">SIE 2023</a>). Gran Sasso Science Institute, L’Aquila (Italy). October 2023."
+  },
+  {
+    "tag": "p",
+    "text": "11) 10th Meeting of the Behavioural and Experimental Economics Network. University of Trento, Trento (Italy). September 2023.",
+    "html": "11) 10th Meeting of the Behavioural and Experimental Economics Network. University of Trento, Trento (Italy). September 2023."
+  },
+  {
+    "tag": "p",
+    "text": "10) 2023 ESA world meeting (ESAWorld23). University of Lyon, Lyon (France), June 2023.",
+    "html": "10) 2023 ESA world meeting (<a href=\"https://esaworld23.gate.cnrs.fr/\">ESAWorld23</a>). University of Lyon, Lyon (France), June 2023."
+  },
+  {
+    "tag": "p",
+    "text": " 9) 12th Southern Europe Experimental Team’s Meeting (SEET 2023). University of Valencia, Valencia (Spain). February 2023.",
+    "html": " 9) 12th Southern Europe Experimental Team’s Meeting (<a href=\"http://www.adeit-uv.econgres.es/seet2023/\">SEET 2023</a>). University of Valencia, Valencia (Spain). February 2023."
+  },
+  {
+    "tag": "p",
+    "text": " ",
+    "html": " "
+  },
+  {
+    "tag": "p",
+    "text": "2022",
+    "html": "2022"
+  },
+  {
+    "tag": "p",
+    "text": "8) 47th Symposium of the Spanish Economic Association. University of Valencia, Valencia (Spain). December 2022.  ",
+    "html": "8) 47th Symposium of the Spanish Economic Association. University of Valencia, Valencia (Spain). December 2022.  "
+  },
+  {
+    "tag": "p",
+    "text": "7) Workshop on Model Evaluation and Causal Search: Empirical and Experimental Approaches. University of Pisa, Pisa (Italy). September 2022. ",
+    "html": "7) Workshop on Model Evaluation and Causal Search: Empirical and Experimental Approaches. University of Pisa, Pisa (Italy). September 2022. "
+  },
+  {
+    "tag": "p",
+    "text": "6) XVI GRASS Workshop. Marche Polytechnic University, Ancona (Italy). September 2022.",
+    "html": "6) XVI GRASS Workshop. Marche Polytechnic University, Ancona (Italy). September 2022."
+  },
+  {
+    "tag": "p",
+    "text": "5) European Economic Science Association Conference 2022 (ESABOLOGNA2022). University of Bologna, Bologna (Italy). September 2022.",
+    "html": "5) European Economic Science Association Conference 2022 (<a href=\"https://www.esabologna2022.com/\">ESABOLOGNA2022</a>). University of Bologna, Bologna (Italy). September 2022."
+  },
+  {
+    "tag": "p",
+    "text": "4) Learning, Evolution, and Games conference (LEG2022). IMT School for Advanced Studies Lucca, Lucca (Italy). July 2022.",
+    "html": "4) Learning, Evolution, and Games conference (<a href=\"https://leg2020.imtlucca.it/home\">LEG2022</a>). IMT School for Advanced Studies Lucca, Lucca (Italy). July 2022."
+  },
+  {
+    "tag": "p",
+    "text": "3) Workshop on Strategic Information Transmission (SIT2022). University of Alicante, Alicante (Spain). June 2022.",
+    "html": "3) Workshop on Strategic Information Transmission (SIT2022). University of Alicante, Alicante (Spain). June 2022."
+  },
+  {
+    "tag": "p",
+    "text": "2) Young Economists’ Meeting 2022 (YEM 2022). Masaryk University, Brno (Czech Republic). May 2022",
+    "html": "2) Young Economists’ Meeting 2022 (<a href=\"https://yem.econ.muni.cz/\">YEM 2022</a>). Masaryk University, Brno (Czech Republic). May 2022"
+  },
+  {
+    "tag": "p",
+    "text": "2021",
+    "html": "2021"
+  },
+  {
+    "tag": "p",
+    "text": "1) Sixth Meeting of the Behavioral and Experimental Economics Network (VI BEEN 2021). University of Bologna, Bologna (Italy). September 2021.  ",
+    "html": "1) Sixth Meeting of the Behavioral and Experimental Economics Network (VI BEEN 2021). University of Bologna, Bologna (Italy). September 2021.  "
+  },
+  {
+    "tag": "p",
+    "text": "Seminars",
+    "html": "Seminars"
+  },
+  {
+    "tag": "p",
+    "text": "Department seminar at the Department of Economic Analysis at the University of Valencia (Spain), Management and Statistics (DEMS) at the University of Milan-Bicocca (Italy), Department seminar at the Economics Theory and History department (THE) at Universidad de Málaga (Spain), Internal seminar at the Rady School of Management at UCSD (United States); TBE internal seminar at the Economics department at UCSD (United States); Internal Economics seminar at the QED department at Universidad de Alicante (Spain).",
+    "html": "Department seminar at the Department of Economic Analysis at the University of Valencia (Spain), Management and Statistics (DEMS) at the University of Milan-Bicocca (Italy), Department seminar at the Economics Theory and History department (THE) at Universidad de Málaga (Spain), Internal seminar at the Rady School of Management at UCSD (United States); TBE internal seminar at the Economics department at UCSD (United States); Internal Economics seminar at the QED department at Universidad de Alicante (Spain)."
+  }
+]
