@@ -11,8 +11,10 @@ Para volver a la anterior desde PyCharm:
    fondo de `#3b3d3d` a `#595a57`, el color anterior de los laterales.
 3. Ejecuta `build.py` y `verify.py`, revisa la web y haz Commit and Push.
 
-La nueva imagen usa `object-fit:contain` para mostrarla completa también en
-móvil. La zona de cabecera sobrante se rellena con el color de la pizarra.
+La nueva imagen usa `object-fit:cover` y ancho del 100 % para llenar la
+cabecera. El encuadre `object-position:30% center` prioriza la zona de la mano
+en pantallas estrechas. Para mostrar la foto completa con márgenes, se puede
+volver a `object-fit:contain`.
 
 Los roles se generan en el bucle de cursos de `build.py`: Course Instructor
 para Introduction to microeconomics y Teaching Assistant para los demás.
