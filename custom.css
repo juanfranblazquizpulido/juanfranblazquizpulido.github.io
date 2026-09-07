@@ -127,8 +127,10 @@ html{scroll-padding-top:calc(var(--header-height) + 24px)}
   .hero .research-field-row .research-tags span{font-size:.7rem;padding:2px 6px}
 }
 @media(min-width:901px){
-  .hero-home h1,.hero-home .hero-subtitle{white-space:nowrap}
+  .hero-home .hero-subtitle{white-space:nowrap}
 }
+.hero-home h1{white-space:normal}
+.surname{display:inline-block;white-space:nowrap}
 @media(min-width:721px) and (max-width:900px){:root{--hero-content-height:210px}}
 @media(max-width:720px){
   :root{--hero-content-height:250px}

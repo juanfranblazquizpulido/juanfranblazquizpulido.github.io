@@ -50,7 +50,9 @@ for social in socials:
     assert social['icon'] in pages['index.html'].images
 assert '>Home</a>' in home
 assert home.index('Welcome to my academic webpage.') < home.index('ABOUT ME')
-assert home.index('You can call me Juanfran') < home.index('ABOUT ME')
+assert home.index('You can call me <strong>Juanfran</strong>') < home.index('ABOUT ME')
+assert '<span class="surname">Blázquiz Pulido</span>' in home
+assert 'Spring 2022' in (out/'teaching.html').read_text(encoding='utf-8')
 assert '<!-- HOME_HERO_TAGLINE:' in home
 assert home.index('class="social-icons"') < home.index('</aside>')
 assert 'class="brand-photo"' in home
