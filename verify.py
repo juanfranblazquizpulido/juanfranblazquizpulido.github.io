@@ -24,7 +24,7 @@ for name,page in pages.items():
     if name!='inicio.html':assert page.h1==1,name
     for src in page.images:
         assert not urlsplit(src).scheme,('Expected local image',name,src)
-        assert (out/unquote(urlsplit(src).path)).is_file(),(name,src)
+        assert (out/src).is_file(),(name,src)
 research=(out/'research.html').read_text(encoding='utf-8')
 for n in range(1,25):assert f'conference-{n}' in pages['research.html'].ids,n
 assert research.count('<details>')==2
