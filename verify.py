@@ -75,7 +75,9 @@ assert 'mailto:jf.blazquizpulido@imtlucca.it' in pages['index.html'].links
 assert '<br>Previously known as' in research
 assert 'Piazza S. Francesco' not in contact
 assert contact.index('EMAIL') < contact.index('ADDRESS / SPAIN')
-assert images['contact_photo'] in pages['contact.html'].images
+assert images['contact_photo'] not in pages['contact.html'].images
+assert 'class="hero-subtitle"' not in contact
+assert contact.count('<section class="contact-information">') == 2
 assert 'Graduate and undergraduate courses' not in (out/'teaching.html').read_text(encoding='utf-8')
 for social in socials:assert social['icon'] in pages['contact.html'].images
 for url in json.loads((root/'content/coauthors.json').read_text(encoding='utf-8')).values():assert url in pages['research.html'].links

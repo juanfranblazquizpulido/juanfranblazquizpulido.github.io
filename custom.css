@@ -173,7 +173,7 @@ html{scroll-padding-top:calc(var(--header-height) + 24px)}
 
 /* Contact: email then address on the left, uncropped UA photo on the right. */
 .contact-grid{align-items:center}
-.contact-information{display:flex;flex-direction:column;gap:28px;min-width:0}
+.contact-information{min-width:0}
 .contact-information h3{min-height:0;margin-block:12px}
 .contact-information address{margin-bottom:0}
 .contact-photo{margin:0;min-width:0}
@@ -252,3 +252,14 @@ footer .profiles a{white-space:nowrap;font-size:.82rem}
 .contact-emails{flex-direction:row;gap:12px 24px;flex-wrap:wrap}
 .contact-emails .email{white-space:nowrap;font-size:.9rem}
 @media(min-width:901px){.contact-grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:36px}}
+
+/* Contact: email and address share a row on wide screens. */
+.contact-grid{align-items:start}
+.hero-image-contact{object-position:center 48%}
+.hero-image-index{object-position:center 49%}
+@media(max-width:720px){.contact-emails .email{white-space:normal}}
+
+/* Slightly wider CV framing; retain the shared header dimensions. */
+.hero-cv{background:linear-gradient(to bottom,#bacfe0 0%,#c4d3df 48%,#7d9460 78%,#6d853e 100%)}
+.hero-image-cv{transform:scale(.9);object-position:70% 35%;mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent);height:112%;top:-6%}
+
