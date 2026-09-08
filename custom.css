@@ -255,11 +255,15 @@ footer .profiles a{white-space:nowrap;font-size:.82rem}
 
 /* Contact: email and address share a row on wide screens. */
 .contact-grid{align-items:start}
-.hero-image-contact{object-position:center 48%}
+.hero-image-contact{object-position:center 54%}
 .hero-image-index{object-position:center 49%}
 @media(max-width:720px){.contact-emails .email{white-space:normal}}
 
 /* Slightly wider CV framing; retain the shared header dimensions. */
-.hero-cv{background:linear-gradient(to bottom,#bacfe0 0%,#c4d3df 48%,#7d9460 78%,#6d853e 100%)}
-.hero-image-cv{transform:scale(.9);object-position:70% 35%;mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent);height:112%;top:-6%}
+.hero-cv{height:max(calc(var(--header-height) + var(--hero-content-height)),28vw);min-height:330px}
+.hero-image-cv{transform:scale(1.25);transform-origin:70% 52%;object-position:70% 52%;mask-image:none;width:100%;height:100%;top:0;object-fit:cover}
+@media(max-width:720px){
+  .hero-cv{height:calc(var(--header-height) + var(--hero-content-height));min-height:380px}
+  .hero-image-cv{transform:scale(1.18);transform-origin:70% 52%;object-position:70% 52%}
+}
 
