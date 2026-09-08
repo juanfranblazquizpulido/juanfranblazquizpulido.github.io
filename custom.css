@@ -266,7 +266,7 @@ footer .profiles a{white-space:nowrap;font-size:.82rem}
    Horizontal negativo = izquierda; positivo = derecha.
    Vertical positivo = abajo; negativo = arriba. scale controla el zoom.
    Cambiar tambien la regla movil inferior para aplicar el mismo ajuste. */
-.hero-image-cv{transform:translate(11%,4px) scale(1.24);transform-origin:70% 32%;object-position:70% 32%;mask-image:none;width:100%;height:100%;top:0;object-fit:cover}
+.hero-image-cv{transform:translate(7%,-7px) scale(1.14);transform-origin:70% 32%;object-position:70% 32%;mask-image:none;width:100%;height:100%;top:0;object-fit:cover}
 @media(max-width:720px){
   .hero-image-cv{transform:translate(1%,26px) scale(1.46);transform-origin:70% 12%;object-position:70% 32%}
 }
