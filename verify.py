@@ -52,7 +52,7 @@ for name in ['index.html','cv.html']:
     assert all(link==cv_url for link in cv_links), ('Stale CV link',name)
 images=json.loads((root/'content/images.json').read_text(encoding='utf-8'))
 for key in ['inicio','research','teaching','cv','contact']:
-    assert images[key] in pages[('index' if key=='inicio' else key)+'.html'].images
+    assert images[key] in [unquote(urlsplit(src).path) for src in pages[('index' if key=='inicio' else key)+'.html'].images]
     assert not urlsplit(images[key]).scheme,('Background must be local',key)
     assert (out/images[key]).is_file(),key
 assert images['portrait'] in pages['index.html'].images
