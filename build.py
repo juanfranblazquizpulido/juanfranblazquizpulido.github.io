@@ -33,7 +33,12 @@ def document(page,title,body,subtitle='',home=False):
     plain_title=re.sub('<[^>]+>',' ',title)
     nav=''.join(f'<a href="{p}.html"'+(' aria-current="page"' if p==page else '')+f'>{n}</a>' for p,n in pages)
     desc=('Juan Francisco Blázquiz Pulido — Assistant Professor at the Universitat de València, Department of Economic Analysis. Behavioral and experimental economics, game theory and neuroeconomics.' if home else f'{plain_title} — Juan Francisco Blázquiz Pulido, Assistant Professor at the Universitat de València.')
-    image=escape(assets['inicio' if home else page],quote=True)
+    image_path = assets['inicio' if home else page]
+    if page == 'contact':
+        # Refresh cached Contact photos whenever the image contents change.
+        image_version = hashlib.sha256((OUT/image_path).read_bytes()).hexdigest()[:12]
+        image_path += '?v=' + image_version
+    image=escape(image_path,quote=True)
     if home:
         title = 'Juan Francisco <span class="surname">Blázquiz Pulido</span>'
     analytics = json.loads((DATA/'analytics.json').read_text(encoding='utf-8'))
