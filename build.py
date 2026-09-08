@@ -93,6 +93,8 @@ def news_section():
 
 home=blocks('inicio')
 body=f'''<div class="wrap about-layout"><aside class="profile"><img class="portrait" src="{escape(assets['portrait'],quote=True)}" alt="Juan Francisco Blázquiz Pulido" width="1280" height="1280"><div class="profile-caption"><span class="eyebrow">ASSISTANT PROFESSOR</span><p>Valencia, Spain</p></div><div class="profile-actions"><a class="button" href="research.html#publications">Publications</a><a class="button" href="cv.html">CV</a><a class="button" href="mailto:jf.blazquizpulido@imtlucca.it">Email</a></div><div class="profile-section"><h3>Find me online</h3>{profiles(icons=True)}</div></aside><article class="biography"><h2>Welcome to my academic website!</h2><p class="intro-note">You can call me <strong>Juanfran</strong>, a Spanish short form of Juan Francisco.</p><p class="eyebrow accent">ABOUT ME</p>{''.join(para(home[i]['html']) for i in [3,4,5])}<div class="text-actions"><a href="research.html">Explore my research <span aria-hidden="true">→</span></a><a href="contact.html">Contact me <span aria-hidden="true">↗</span></a></div>{news_section()}</article></div>'''
+# On phones the profile links follow News; CSS shows only one copy at a time.
+body=body.replace('</article>',f'<section class="mobile-profiles"><h2>Find me online</h2>{profiles(icons=True)}</section></article>')
 document('index','Juan Francisco Blázquiz Pulido',body,'Assistant Professor · University of Valencia (UV)',True)
 
 b=blocks('research')
