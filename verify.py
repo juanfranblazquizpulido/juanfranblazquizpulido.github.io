@@ -13,7 +13,11 @@ class Page(HTMLParser):
         if tag in ['a','link'] and a.get('href'):self.links.append(a['href'])
         if tag=='img':self.images.append(a.get('src'))
         if tag=='h1':self.h1+=1
-pages={p.name:Page(p.read_text(encoding='utf-8')) for p in out.glob('*.html')}
+verification_files = list(out.glob('google*.html'))
+for p in verification_files:
+    assert re.fullmatch(r'google[a-zA-Z0-9]+\.html', p.name), p.name
+    assert p.read_text(encoding='utf-8').strip() == 'google-site-verification: ' + p.name, p.name
+pages={p.name:Page(p.read_text(encoding='utf-8')) for p in out.glob('*.html') if p not in verification_files}
 for name,page in pages.items():
     for href in page.links:
         u=urlsplit(href)
@@ -82,4 +86,15 @@ assert 'Graduate and undergraduate courses' not in (out/'teaching.html').read_te
 for social in socials:assert social['icon'] in pages['contact.html'].images
 for url in json.loads((root/'content/coauthors.json').read_text(encoding='utf-8')).values():assert url in pages['research.html'].links
 print('PASS: internal links, local images, five pages, 24 conferences, both abstracts, seven profiles and icons, both emails, local CV, updated Home layout and commented tagline.')
+from xml.etree import ElementTree
+site_url='https://juanfranblazquizpulido.github.io/'
+expected=[site_url]+[site_url+p+'.html' for p in ['research','teaching','cv','contact']]
+locations=[node.text for node in ElementTree.parse(out/'sitemap.xml').findall('{*}url/{*}loc')]
+assert locations==expected, locations
+for page, url in zip(['index','research','teaching','cv','contact'],expected):
+    html=(out/(page+'.html')).read_text(encoding='utf-8')
+    assert html.count('rel="canonical"') == 1
+    assert f'<link rel="canonical" href="{url}">' in html
+assert f'Sitemap: {site_url}sitemap.xml' in (out/'robots.txt').read_text(encoding='utf-8')
+print('PASS: canonical URLs, sitemap, robots.txt and Google verification files.')
 print('No browser visual test was performed.')

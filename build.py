@@ -7,6 +7,7 @@ ROOT=Path(__file__).parent
 DATA=ROOT/'content'
 OUT=ROOT/'dist'
 OUT.mkdir(exist_ok=True)
+SITE_URL='https://juanfranblazquizpulido.github.io/'
 def copy_changed(src,dst):
     # Avoid rewriting unchanged large photos while the preview serves them.
     if Path(dst).is_file() and Path(src).read_bytes()==Path(dst).read_bytes():
@@ -63,6 +64,8 @@ def document(page,title,body,subtitle='',home=False):
     html=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{'Juan Francisco Blázquiz Pulido | Economics' if home else plain_title+' | Juan Francisco Blázquiz Pulido'}</title><meta name="description" content="{escape(desc,quote=True)}"><meta name="color-scheme" content="light dark"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#101b29"><meta property="og:title" content="{escape(plain_title,quote=True)}"><meta property="og:description" content="{escape(desc,quote=True)}"><meta property="og:type" content="website"><script src="theme.js"></script><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="custom.css"><script src="header.js" defer></script><link rel="icon" href="{escape(assets['portrait'],quote=True)}" type="image/jpeg"></head>
 <body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="wrap header-inner"><a class="brand" href="index.html"><img class="brand-photo" src="{escape(assets['portrait'],quote=True)}" alt="" width="52" height="52"><span>Juanfran <span class="surname">Blázquiz Pulido</span></span></a><nav aria-label="Main navigation">{nav}<button id="theme-toggle" class="theme-toggle" type="button" hidden aria-label="Colour theme: Auto">◐</button></nav></div></header><main id="main">{hero}{body}</main><footer><div class="wrap"><div class="footer-top"><div><a class="footer-name" href="index.html">Juan Francisco Blázquiz Pulido</a><p><a href="https://www.uv.es/uvweb/college/en/profile-1285950309813.html?p2=blazpu@uv.es&amp;idA=">Department of Economic Analysis</a><br><a href="https://www.uv.es/uvweb/college/en/university-valencia-1285845048380.html">University of Valencia</a></p></div><div><p class="footer-label">Find me online</p>{profiles()}</div></div><div class="footer-bottom"><span>Content last updated: 7 September 2026</span><a href="mailto:jf.blazquizpulido@imtlucca.it">Get in touch <span aria-hidden="true">↗</span></a></div></div></footer>{analytics_script}</body></html>'''
+    canonical = SITE_URL + ('' if home else page + '.html')
+    html = html.replace('</head>', f'<link rel="canonical" href="{canonical}"><meta property="og:url" content="{canonical}"></head>')
     # Changed CSS gets a new URL so browsers do not reuse an older cached layout.
     for stylesheet in ('styles.css', 'custom.css'):
         version = hashlib.sha256((OUT/stylesheet).read_bytes()).hexdigest()[:12]
@@ -150,5 +153,9 @@ document('contact','Contact',contact)
 (OUT/'.nojekyll').write_text('')
 # Retain the original home-page name for bookmarks and migrated links.
 (OUT/'inicio.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=index.html"><title>Juan Francisco Blázquiz Pulido</title><a href="index.html">Go to the homepage</a></html>',encoding='utf-8')
-print('Built five pages, home alias, stylesheet and assets in dist/')
+# Only canonical public pages belong in the sitemap; do not invent modification dates.
+urls = [SITE_URL + ('' if page == 'index' else page + '.html') for page, _ in pages]
+(OUT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'  <url><loc>{escape(url)}</loc></url>\n' for url in urls) + '</urlset>\n', encoding='utf-8')
+(OUT/'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}sitemap.xml\n', encoding='utf-8')
+print('Built five pages, home alias, sitemap, robots.txt, stylesheet and assets in dist/')
 
