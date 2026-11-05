@@ -2,8 +2,14 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit,unquote
 import json,re,hashlib
+from update_dates import english_date
 root=Path(__file__).parent
 out=root/'dist'
+updates=json.loads((root/'content/updated.json').read_text(encoding='utf-8'))
+for name in ('index', 'research', 'teaching', 'cv', 'contact'):
+    html=(out/(name+'.html')).read_text(encoding='utf-8')
+    assert 'Content last updated: '+english_date(updates[name]['date']) in html, name
+    assert '__UPDATED__' not in html, name
 class Page(HTMLParser):
     def __init__(self,text):
         super().__init__();self.ids=set();self.links=[];self.images=[];self.h1=0;self.feed(text)
